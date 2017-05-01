@@ -1,0 +1,24 @@
+<html>
+  <head>  
+    <meta charset="UTF-8">  
+    <title>Esecuzione di elementi periodici</title>
+  </head>
+  <body>  
+    <h1>Contatore di secondi HTML</h1>   
+    <p>Ti trovi in questo sito esattamente da <span class="contador">0</span> secondi</p>  
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>  
+    <script>     
+       var contador = 0;    
+       function refrescarContador() {        
+          $('.contador').html(contador);     
+       }     
+       function incrementarContador() {        
+          contador++;     
+       }     
+       setInterval(function() {         
+          incrementarContador();        
+          refrescarContador();     
+       }, 1000);  
+    </script>
+   </body>
+</html>
